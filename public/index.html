@@ -23,8 +23,12 @@
 
         socket.emit('mensaje', {nombre: 'Adrian'})
 
-        socket.on('mensaje', function(payload){
-            console.log('llego el mensaje: ', payload);
+        socket.on('mensaje', (payload) => {
+            console.log('escuchando: ', payload);
+        })
+
+        socket.on('active-bands', (bands) => {
+            console.log(bands);
         })
     </script>
 </body>
